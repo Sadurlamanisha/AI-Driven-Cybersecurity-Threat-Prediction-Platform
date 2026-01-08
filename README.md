@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Threat Predict
+=======
+# Threat Predict🛡️
+>>>>>>> 31823c51caa67dbfb111d590c0751cebfbe869bf
 
 Threat Predict is a comprehensive security monitoring and scanning platform built with modern web technologies. It provides real-time threat detection, AI-powered predictions, and various security scanning tools to ensure the integrity and safety of your digital assets.
 
@@ -67,7 +71,13 @@ Threat Predict is a comprehensive security monitoring and scanning platform buil
    npm run dev
    ```
    The application will be available at `http://localhost:8080`.
+<<<<<<< HEAD
 
+=======
+5. **Default Admin credentials**
+   Username: Avinash@tp.com
+   Pass : 12345678
+>>>>>>> 31823c51caa67dbfb111d590c0751cebfbe869bf
 ## 🏗️ Project Structure
 
 - `src/pages`: Main application views (Dashboard, Scanners, Monitors, etc.)
@@ -79,3 +89,8 @@ Threat Predict is a comprehensive security monitoring and scanning platform buil
 ## 📄 License
 
 This project is licensed under the MIT License.
+<<<<<<< HEAD
+=======
+
+https://github.com/user-attachments/assets/d7050775-b41c-4e52-9a29-656f392f2f34
+>>>>>>> 31823c51caa67dbfb111d590c0751cebfbe869bf
