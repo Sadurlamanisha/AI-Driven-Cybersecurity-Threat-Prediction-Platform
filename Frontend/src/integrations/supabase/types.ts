@@ -118,6 +118,51 @@ export type Database = {
         }
         Relationships: []
       }
+      export_history: {
+        Row: {
+          collection: string
+          config_summary: Json | null
+          data_snapshot: Json | null
+          error_message: string | null
+          exported_at: string
+          external_id: string | null
+          external_url: string | null
+          id: string
+          platform: string
+          status: string
+          synced_at: string | null
+          user_id: string | null
+        }
+        Insert: {
+          collection: string
+          config_summary?: Json | null
+          data_snapshot?: Json | null
+          error_message?: string | null
+          exported_at?: string
+          external_id?: string | null
+          external_url?: string | null
+          id?: string
+          platform: string
+          status?: string
+          synced_at?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          collection?: string
+          config_summary?: Json | null
+          data_snapshot?: Json | null
+          error_message?: string | null
+          exported_at?: string
+          external_id?: string | null
+          external_url?: string | null
+          id?: string
+          platform?: string
+          status?: string
+          synced_at?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
       incidents: {
         Row: {
           assigned_to: string | null
@@ -324,6 +369,62 @@ export type Database = {
           threats_found?: number | null
         }
         Relationships: []
+      }
+      threat_doctor_conversations: {
+        Row: {
+          created_at: string
+          id: string
+          title: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          title?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          title?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      threat_doctor_messages: {
+        Row: {
+          content: string
+          conversation_id: string
+          created_at: string
+          id: string
+          role: string
+        }
+        Insert: {
+          content: string
+          conversation_id: string
+          created_at?: string
+          id?: string
+          role: string
+        }
+        Update: {
+          content?: string
+          conversation_id?: string
+          created_at?: string
+          id?: string
+          role?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "threat_doctor_messages_conversation_id_fkey"
+            columns: ["conversation_id"]
+            isOneToOne: false
+            referencedRelation: "threat_doctor_conversations"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       threats: {
         Row: {

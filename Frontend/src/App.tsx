@@ -26,6 +26,8 @@ const Analytics = lazy(() => import("./pages/monitor/Analytics"));
 const ThreatFeed = lazy(() => import("./pages/monitor/ThreatFeed"));
 const BlockedAttacks = lazy(() => import("./pages/monitor/BlockedAttacks"));
 const Predictions = lazy(() => import("./pages/ai/Predictions"));
+const ThreatDoctor = lazy(() => import("./pages/ai/ThreatDoctor"));
+const ExportHistory = lazy(() => import("./pages/ExportHistory"));
 
 const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center bg-background">
@@ -61,10 +63,12 @@ const App = () => (
               <Route path="/monitor/threat-feed" element={<ThreatFeed />} />
               <Route path="/monitor/blocked-attacks" element={<BlockedAttacks />} />
               <Route path="/ai/predictions" element={<Predictions />} />
+              <Route path="/ai/threat-doctor" element={<ThreatDoctor />} />
               <Route path="/incidents" element={<Incidents />} />
               <Route path="/settings" element={<Settings />} />
               <Route path="/users" element={<Users />} />
               <Route path="/users/roles" element={<Roles />} />
+              <Route path="/exports" element={<ExportHistory />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
