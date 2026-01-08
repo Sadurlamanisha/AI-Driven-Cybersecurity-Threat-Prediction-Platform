@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-# Threat Predict
-=======
+
+
 # Threat Predict🛡️
 >>>>>>> 31823c51caa67dbfb111d590c0751cebfbe869bf
 
